@@ -7,8 +7,8 @@ angular.module('blog', ['ui.router'])
   $stateProvider
   .state('home', {
     url: '/',
-    // templateUrl: 'views/landingView.html',
-    // controller: 'landingCtrl'
+    templateUrl: 'views/landingView.html',
+    controller: 'landingCtrl'
   })
   // .state('travel', {
   //   url: '/travel',
