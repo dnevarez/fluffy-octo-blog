@@ -1,0 +1,12 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+body {
+  font-family: 'Nanum Pen Script', fantasy, sans-serif; }
+
+.post-container {
+  height: 150px;
+  overflow: hidden;
+  width: 90%;
+  margin: 10px auto;
+  box-shadow: 1px 1px 2px gray; }
+  .post-container h2 {
+    margin-top: 5px; }
