@@ -10,3 +10,6 @@ body {
   box-shadow: 1px 1px 2px gray; }
   .post-container h2 {
     margin-top: 5px; }
+
+.posts:nth-child(n+4) .post-container {
+  background: gray; }
