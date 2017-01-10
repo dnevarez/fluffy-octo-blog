@@ -1,0 +1,3 @@
+ReferenceError: config is not defined
+at Object.<anonymous> (/Users/Dan/codingProjects/blog/backend/server.js:12:12)
+    -Forgot to require config.json, fixed by requiring in config file.
