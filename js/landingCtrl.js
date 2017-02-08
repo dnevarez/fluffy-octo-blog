@@ -3,4 +3,5 @@ angular.module('blog')
 
   // $scope.test = "Hello World!"
 $scope.posts = service.getPosts();
+
 })
