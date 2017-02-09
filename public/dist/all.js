@@ -10,8 +10,8 @@ angular.module('blog', ['ui.router']).config(function ($stateProvider, $urlRoute
     controller: 'landingCtrl'
   }).state('adminLogin', {
     url: '/letintheadmin',
-    templateUrl: 'views/adminLogin.html'
-    // controller: 'travelCtrl'
+    templateUrl: 'views/adminLogin.html',
+    controller: 'adminLoginCtrl'
   })
   // .state('people', {
   //   url: '/people',
@@ -46,6 +46,14 @@ angular.module('blog', ['ui.router']).config(function ($stateProvider, $urlRoute
       }
     }
   });
+});
+'use strict';
+
+angular.module('blog').controller('adminLoginCtrl', function ($scope, service) {
+  $scope.adminLogin = function (user, password) {
+    // service.adminLogin(user,password)
+    console.log(user, password);
+  };
 });
 'use strict';
 

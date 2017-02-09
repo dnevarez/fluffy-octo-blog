@@ -1,5 +1,5 @@
 <section>
-  <input type="text" name="username" placeholder="username"/>
-  <input type="text" name="password" placeholder="password"/>
-  <input type="submit" name="" value="Login">
+  <input type="text" name="username" placeholder="username" ng-model="username"/>
+  <input type="password" name="password" placeholder="password" ng-model="password"/>
+  <input type="submit" name="" value="Login" ng-click="adminLogin(username, password)">
 </section>

@@ -12,8 +12,8 @@ angular.module('blog', ['ui.router'])
   })
   .state('adminLogin', {
     url: '/letintheadmin',
-    templateUrl: 'views/adminLogin.html'
-    // controller: 'travelCtrl'
+    templateUrl: 'views/adminLogin.html',
+    controller: 'adminLoginCtrl'
   })
   // .state('people', {
   //   url: '/people',
