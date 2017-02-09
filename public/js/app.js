@@ -34,4 +34,19 @@ angular.module('blog', ['ui.router'])
   //   url: '/contact',
   //   templateUrl: 'views/contactView.html'
   // })
+  .state('post', {
+      url: '/post/:id',
+      templateUrl: './views/readPost.html',
+      controller: 'postCtrl',
+      controllerAs: 'vm',
+      resolve: {
+          getPost: function(service){
+            return service.getPost()
+            .then(function(res){
+              (res)
+              return res;
+            })
+          }
+        }
+      })
 })

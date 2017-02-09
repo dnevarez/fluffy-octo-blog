@@ -6,7 +6,7 @@ var sass = require('gulp-sass');
 var order = require('gulp-order');
 
 gulp.task('es6', function () {
-  return gulp.src([ './js/*.js','./js/**/*.js'])
+  return gulp.src([ './public/js/*.js','./public/js/**/*.js'])
   .pipe(plumber())
   .pipe(babel({
     "presets": ["es2015"]
@@ -15,20 +15,20 @@ gulp.task('es6', function () {
     'app.js', '*.js'
   ]))
   .pipe(concat('all.js'))
-  .pipe(gulp.dest('dist'));
+  .pipe(gulp.dest('public/dist'));
 })
 
 gulp.task('sass', function() {
-  return gulp.src('./styles/*.scss')
+  return gulp.src('./public/styles/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(concat('all.css'))
-  .pipe(gulp.dest('dist'))
+  .pipe(gulp.dest('public/dist'))
 })
 
 gulp.task('watch', function() {
-  gulp.watch('./styles/*.scss', ['sass'])
+  gulp.watch('./public/styles/*.scss', ['sass'])
   // gulp.watch('./styles/**/*.scss', ['sass'])
-  gulp.watch('./js/*.js', ['es6'])
+  gulp.watch('./public/js/*.js', ['es6'])
 });
 
 gulp.task('default', ['watch', 'es6', 'sass'])
