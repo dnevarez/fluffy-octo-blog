@@ -3,7 +3,8 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var config = require('../config.json')
 
-var data = require('./dummydata.js')
+/// Controllers ////
+var postCtrl = require('./controllers/postController.js')
 
 var app = express();
 
@@ -16,7 +17,7 @@ var port = config.port;
 
 
 // endpoints
-app.get('/posts', data.getPosts)
+app.get('/posts', postCtrl.getPosts)
 
 
 app.listen(port, function() {

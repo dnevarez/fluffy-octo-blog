@@ -10,11 +10,11 @@ angular.module('blog', ['ui.router'])
     templateUrl: 'views/landingView.html',
     controller: 'landingCtrl'
   })
-  // .state('travel', {
-  //   url: '/travel',
-  //   templateUrl: 'views/travelView.html',
-  //   controller: 'travelCtrl'
-  // })
+  .state('adminLogin', {
+    url: '/letintheadmin',
+    templateUrl: 'views/adminLogin.html'
+    // controller: 'travelCtrl'
+  })
   // .state('people', {
   //   url: '/people',
   //   templateUrl: 'views/peopleView.html',

@@ -8,12 +8,11 @@ angular.module('blog', ['ui.router']).config(function ($stateProvider, $urlRoute
     url: '/',
     templateUrl: 'views/landingView.html',
     controller: 'landingCtrl'
+  }).state('adminLogin', {
+    url: '/letintheadmin',
+    templateUrl: 'views/adminLogin.html'
+    // controller: 'travelCtrl'
   })
-  // .state('travel', {
-  //   url: '/travel',
-  //   templateUrl: 'views/travelView.html',
-  //   controller: 'travelCtrl'
-  // })
   // .state('people', {
   //   url: '/people',
   //   templateUrl: 'views/peopleView.html',
