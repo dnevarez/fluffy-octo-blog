@@ -1,0 +1,15 @@
+<section ng-repeat="year in postDates">
+  <ul>
+    <li>
+      {{year.year}}
+      <ul>
+        <li>
+          {{year.month}}
+          <ul>
+            <li>{{year.post}}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>
