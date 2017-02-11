@@ -35,17 +35,19 @@ angular.module('blog', ['ui.router']).config(function ($stateProvider, $urlRoute
   .state('post', {
     url: '/post/:id',
     templateUrl: './views/readPost.html',
-    controller: 'postCtrl',
-    controllerAs: 'vm',
-    resolve: {
-      getPost: function getPost(service) {
-        return service.getPost().then(function (res) {
-          res;
-          return res;
-        });
-      }
-    }
+    controller: 'mainCtrl'
+    // controllerAs: 'vm',
+    // resolve: {
+    //     getPost: function(service){
+    //       return service.getPost()
+    //       .then(function(res){
+    //         (res)
+    //         return res;
   });
+  //       }
+  //     }
+  //   }
+  // )
 });
 'use strict';
 
@@ -66,7 +68,13 @@ angular.module('blog').controller('landingCtrl', function ($scope, service) {
 });
 'use strict';
 
-angular.module('blog').controller('mainCtrl', function ($scope, service) {});
+angular.module('blog').controller('mainCtrl', function ($scope, service) {
+
+  service.getPost().then(function (response) {
+    console.log(response);
+    $scope.post = response;
+  });
+});
 'use strict';
 
 angular.module('blog').directive('readPost', function () {
@@ -75,7 +83,9 @@ angular.module('blog').directive('readPost', function () {
     // scope: {
     //
     // },
-    templateUrl: '../views/readPost.html'
+    templateUrl: '../views/readPost.html',
+    controller: 'mainCtrl'
+    // controllerAs:
   };
 });
 'use strict';
@@ -95,18 +105,14 @@ angular.module('blog').factory('service', function ($http, $stateParams) {
     },
 
     getPost: function getPost() {
-      $stateParams;
+
       return $http({
         method: 'GET',
-        url: 'myserver',
+        url: 'http://127.0.0.1:3000/post',
         params: { id: $stateParams.id }
       }).then(function (res) {
-        for (var i = 0; i < res.data.length; i++) {
-          if (res.data[i].id === $stateParams.id) {
-            res.data[i];
-            return res.data[i];
-          }
-        }
+        console.log('service: ', res);
+        return res.data;
       });
     }
   };

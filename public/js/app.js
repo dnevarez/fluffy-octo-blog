@@ -37,16 +37,17 @@ angular.module('blog', ['ui.router'])
   .state('post', {
       url: '/post/:id',
       templateUrl: './views/readPost.html',
-      controller: 'postCtrl',
-      controllerAs: 'vm',
-      resolve: {
-          getPost: function(service){
-            return service.getPost()
-            .then(function(res){
-              (res)
-              return res;
+      controller: 'mainCtrl'
+      // controllerAs: 'vm',
+      // resolve: {
+      //     getPost: function(service){
+      //       return service.getPost()
+      //       .then(function(res){
+      //         (res)
+      //         return res;
             })
-          }
-        }
-      })
+    //       }
+    //     }
+    //   }
+    // )
 })

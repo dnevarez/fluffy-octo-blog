@@ -6,7 +6,7 @@ angular.module('blog')
     //
     // },
     templateUrl: '../views/readPost.html',
-    // controller:
+    controller: 'mainCtrl'
     // controllerAs:
   }
 })

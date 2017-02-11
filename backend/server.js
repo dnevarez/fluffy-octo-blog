@@ -18,6 +18,7 @@ var port = config.port;
 
 // endpoints
 app.get('/posts', postCtrl.getPosts)
+app.get('/post', postCtrl.getPost)
 
 
 app.listen(port, function() {

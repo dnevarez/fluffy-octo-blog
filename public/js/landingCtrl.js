@@ -6,4 +6,5 @@ angular.module('blog')
     $scope.posts = res;
   })
 
+
 })
